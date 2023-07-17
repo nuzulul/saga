@@ -1,7 +1,7 @@
 baseURL = "https://pustakasaga.com/"
 languageCode = "id"
 title = "PUSTAKA SAGA"
-theme = "saga"
+theme = "hugo-initio"
 pluralizelisttitles = false
 
 [params]
