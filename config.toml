@@ -1,4 +1,3 @@
-baseURL = "https://pustakasaga.com/"
 languageCode = "id"
 title = "PUSTAKA SAGA"
 theme = "hugo-initio"
