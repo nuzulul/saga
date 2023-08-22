@@ -27,6 +27,13 @@ collections:
     fields: 
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
+      - label: "PDF"
+        name: "pdf"
+        widget: "file"
+        media_library:
+          config:
+            multiple: false
+            media_folder: "/static/files"
       - {label: "Publish Date", name: "date", widget: "datetime",date_format: "DD.MM.YYYY",time_format: "HH:mm"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "halaman"
@@ -38,8 +45,8 @@ collections:
     slug: "{{slug}}" 
     summary: "{{title}}"
     fields: 
-      - {label: "Menu", name: "menu", widget: "hidden", default: "main"}
+      - {label: "Menu", name: "menu", widget: "hidden", default: "main", required: false}
       - {label: "Type", name: "type", widget: "hidden", default: "about"}
-      - {label: "Wight", name: "weight", widget: "hidden", default: "10"}
+      - {label: "Wight", name: "weight", widget: "hidden", default: "10", required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
