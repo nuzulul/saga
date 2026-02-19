@@ -29,9 +29,16 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime",date_format: "DD.MM.YYYY",time_format: "HH:mm"}
+      - label: "PDF"
+        name: "pdf"
+        widget: "file"
+        required: false
+        media_library:
+          config:
+            multiple: false      
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "articles"
-    label: "Articles"
+    label: "Articles Jurnal Saga"
     folder: "content/articles"
     create: true 
     sort: "date:desc"
@@ -44,12 +51,32 @@ collections:
       - label: "PDF"
         name: "pdf"
         widget: "file"
+        required: false
         media_library:
-          media_folder: "/static/files"
           config:
             multiple: false
       - {label: "Publish Date", name: "date", widget: "datetime",date_format: "DD.MM.YYYY",time_format: "HH:mm"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "articles2"
+    label: "Articles Jurnal Suluh Dipanegara"
+    folder: "content/articles2"
+    create: true 
+    sort: "date:desc"
+    sortable_fields: ['title', 'date']
+    slug: "{{slug}}" 
+    summary: "{{title}}"
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "PDF"
+        name: "pdf"
+        widget: "file"
+        required: false
+        media_library:
+          config:
+            multiple: false
+      - {label: "Publish Date", name: "date", widget: "datetime",date_format: "DD.MM.YYYY",time_format: "HH:mm"}
+      - {label: "Body", name: "body", widget: "markdown"}      
   - name: "halaman"
     label: "Halaman"
     folder: "content"
@@ -64,3 +91,29 @@ collections:
       - {label: "Wight", name: "weight", widget: "hidden", default: "10",required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "Giat Literasi"
+    label: "Articles Giat Literasi"
+    folder: "content/giat-literasi"
+    create: true 
+    sort: "date:desc"
+    sortable_fields: ['title', 'date']
+    slug: "{{slug}}" 
+    summary: "{{title}}"
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime",date_format: "DD.MM.YYYY",time_format: "HH:mm"}
+      - {label: "Body", name: "body", widget: "markdown"}  
+  - name: "Kelas Menulis"
+    label: "Articles Kelas Menulis"
+    folder: "content/kelas-menulis"
+    create: true 
+    sort: "date:desc"
+    sortable_fields: ['title', 'date']
+    slug: "{{slug}}" 
+    summary: "{{title}}"
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime",date_format: "DD.MM.YYYY",time_format: "HH:mm"}
+      - {label: "Body", name: "body", widget: "markdown"}        
